@@ -1,0 +1,427 @@
+<?php require_once ROOT.'/engine/templates/header.php'; ?>
+    <div id="entrance" class="entrance">
+        <div class="section">
+            <div class="map-wrapper">
+                <div id="map-canvas" class="map-canvas">Loading map...</div>
+
+                <div class="add-points-panel">
+                    <ul class="progressbar">
+                        <li class="active">
+                            <h4>Местоположение новой точки</h4>
+                            <span class="small-circle"></span>
+                        </li>
+                        <li>
+                            <h4>Укажите имя точки <br/> и трассу</h4>
+                            <span class="small-circle"></span>
+                        </li>
+                        <li>
+                            <h4>Выберите необходимые <br/> датчики</h4>
+                            <span class="small-circle"></span>
+                        </li>
+                    </ul>   
+                </div>
+                <div class="container">
+                    <!--Step1-->
+                    <div id="choose_point_step1" class="points-panel points-panel-wrap">
+                        <div class="points-panel-inner">
+                            <span class="points-panel-title">Выберите область</span>
+                            <ul class="points-list text-center">
+                                <li>Ровенская область</li>
+                                <li>Житомирская область</li>
+                                <li>Киевская область</li>
+                                <li>Запорожская область</li>
+                                <li>Николаевская область</li>
+                                <li>Одесская область</li>
+                                <li>Днепроптровская область</li>
+                                <li>Черниговская область</li>
+                                <li>Донецкая область</li>
+                                <li>Львовская область</li>
+                                <li>Сумская область</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Step3-->
+                    <div id="choose_point_step3" class="points-panel points-panel-wrap">
+                        <div class="points-panel-inner">
+                            <span class="points-panel-title">Название точки</span>
+                            <div class="inputs-container">
+                                <input type="hidden" name="user_region" value="" />
+                                <input type="text" name="point_name" value="" placeholder="Название точки" class="input-field simple"  />
+                                <span class="input-label light-text">Выберите трассу</span>
+                                <div class="light-text selected-value">М08</div>
+                                <div class="select-container">
+                                    <ul id="region-select" class="points-list text-left">
+                                        <li>М1</li>
+                                        <li>М2</li>
+                                        <li>М3</li>
+                                        <li>М4</li>
+                                        <li>М5</li>
+                                        <li>М6</li>
+                                        <li>М7</li>
+                                        <li>М8</li>
+                                        <li>М9</li>
+                                        <li>М10</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="light-text notice">Имя точки должно состоять из названия <br/> трассы и километра.</p>
+                        </div>
+                    </div>
+                    <!--Step4-->
+                    <div id="choose_point_step4" class="points-panel points-panel-wrap step1-panel" style="display: none;">
+                        <div class="points-panel-inner">
+                            <span class="points-panel-title">Отметьте нужные датчики</span>
+                            <div class="inputs-container">
+                                <div class="sensors">
+                                    <div class="row sensors-row">
+                                        <div class="col-sm-2">
+                                            <div class="checkbox-wrap">
+                                                <input type="checkbox" id="check1"/>
+                                                <label for="check1">
+                                                  <div><i class="fa fa-check"></i></div>
+                                                </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check2"/>
+                                                    <label for="check2">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check3"/>
+                                                    <label for="check3">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                        <div class="row sensors-row">
+                                            <div class="col-sm-2">
+                                                <div class="checkbox-wrap">
+                                                    <input type="checkbox" id="check4"/>
+                                                    <label for="check4">
+                                                      <div><i class="fa fa-check"></i></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <p class="sensor-name">D232-342</p>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <p class="sensor-imei">IMEI: +30678362536</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p class="sensor-id">ID: 59</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row action-row">
+                                        <div class="col-sm-6">
+                                            <button class="add-btn">Добавить</button>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <a class="link" href="#">Очистить</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="light-text notice">Имя точки должно состоять из названия <br/> трассы и километра.</p>
+                        </div>
+                    </div>
+                    <div class="blue-panel" id="choose_point_step2">
+                        <p class="light-text blue-panel-text">
+                            Нажмите курсором на карте для выбора местоположения точки.<br/>
+                            Для изменения местоположения точки, кликните на нее два раза и перетащите.
+                        </p>
+                        <button class="gis-btn">Далее</button>
+                    </div>
+
+                    <!--div class="choose-point-tooltip">
+                        <span class="icon-holder"><i class="fa fa-check"></i><br/>Спасибо!</span>
+                        <p class="point-status">Ваша точка успешно добавлена в систему.</p>
+                        <div class="tooltip-arrow"></div>
+                    </div-->
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script src="js/jScrollPane.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/SelectBox.js"></script>
+
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/modernizr.custom.63321.js"></script>
+    <script src="js/jquery.dropdown.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>    
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        (function($){
+            $(window).load(function(){
+                
+                var content=$(".points-list"),autoScrollTimer=8000,autoScrollTimerAdjust,autoScroll;
+                
+                content.mCustomScrollbar({
+                    scrollButtons:{enable:true},
+                    callbacks:{
+                        whileScrolling:function(){
+                            autoScrollTimerAdjust=autoScrollTimer*this.mcs.topPct/100;
+                        },
+                        onScroll:function(){ 
+                            if($(this).data("mCS").trigger==="internal"){AutoScrollOff();}
+                        }
+                    }
+                });
+                
+                content.addClass("auto-scrolling-on auto-scrolling-to-bottom");
+                AutoScrollOn("bottom");
+                
+                function AutoScrollOn(to,timer){
+                    if(!timer){timer=autoScrollTimer;}
+                    content.addClass("auto-scrolling-on").mCustomScrollbar("scrollTo",to,{scrollInertia:timer,scrollEasing:"easeInOutSmooth"});
+                    autoScroll=setTimeout(function(){
+                        if(content.hasClass("auto-scrolling-to-top")){
+                            AutoScrollOn("bottom",autoScrollTimer-autoScrollTimerAdjust);
+                            content.removeClass("auto-scrolling-to-top").addClass("auto-scrolling-to-bottom");
+                        }else{
+                            AutoScrollOn("top",autoScrollTimerAdjust);
+                            content.removeClass("auto-scrolling-to-bottom").addClass("auto-scrolling-to-top");
+                        }
+                    },timer);
+                }
+                
+                function AutoScrollOff(){
+                    clearTimeout(autoScroll);
+                    content.removeClass("auto-scrolling-on").mCustomScrollbar("stop");
+                }
+                
+            });
+        })(jQuery);
+
+        (function($){
+            $(window).load(function(){
+                
+                var content=$(".sensors"),autoScrollTimer=8000,autoScrollTimerAdjust,autoScroll;
+                
+                content.mCustomScrollbar({
+                    scrollButtons:{enable:true},
+                    callbacks:{
+                        whileScrolling:function(){
+                            autoScrollTimerAdjust=autoScrollTimer*this.mcs.topPct/100;
+                        },
+                        onScroll:function(){ 
+                            if($(this).data("mCS").trigger==="internal"){AutoScrollOff();}
+                        }
+                    }
+                });
+                
+                content.addClass("auto-scrolling-on auto-scrolling-to-bottom");
+                AutoScrollOn("bottom");
+                
+                function AutoScrollOn(to,timer){
+                    if(!timer){timer=autoScrollTimer;}
+                    content.addClass("auto-scrolling-on").mCustomScrollbar("scrollTo",to,{scrollInertia:timer,scrollEasing:"easeInOutSmooth"});
+                    autoScroll=setTimeout(function(){
+                        if(content.hasClass("auto-scrolling-to-top")){
+                            AutoScrollOn("bottom",autoScrollTimer-autoScrollTimerAdjust);
+                            content.removeClass("auto-scrolling-to-top").addClass("auto-scrolling-to-bottom");
+                        }else{
+                            AutoScrollOn("top",autoScrollTimerAdjust);
+                            content.removeClass("auto-scrolling-to-bottom").addClass("auto-scrolling-to-top");
+                        }
+                    },timer);
+                }
+                
+                function AutoScrollOff(){
+                    clearTimeout(autoScroll);
+                    content.removeClass("auto-scrolling-on").mCustomScrollbar("stop");
+                }
+                
+            });
+        })(jQuery);
+
+
+    </script>   
+
+</body>
+
+</html>

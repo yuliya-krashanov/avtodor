@@ -1,0 +1,11 @@
+#save-setting-page input[type="text"]{
+	color: #FFF;
+	background: none repeat scroll 0% 0% #2B2F31;
+	border: medium none;
+	min-width: 30px;
+	width: auto;
+	border-radius: 20px;
+	padding: 5px 20px;
+	outline: medium none;
+	text-align: center;
+}

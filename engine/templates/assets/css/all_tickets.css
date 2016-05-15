@@ -1,0 +1,202 @@
+.tickets_top_menu{
+	background-color: #26292b;
+	height: 80px;
+	border-bottom: 1px solid #1a1d1e;
+	margin: 0;
+}
+	
+.tickets_left_part, .tickets_left_part ul{
+	margin: 0;
+	padding: 0;
+}
+
+.tickets_left_part ul li{
+	float: left;
+	list-style: none;
+	padding: 25px 40px;
+}	
+
+.tickets_left_part ul li a{
+	text-decoration: none;
+	color: #67809f;
+	font: 18pt "Exo2-ExtraBold";
+
+}	
+
+.tickets_left_part ul li a:hover{
+	padding-bottom: 20px;
+	border-bottom: 5px solid white;
+}	
+
+#tickets_logo, #tickets_logo a:hover{
+	border-bottom: none;
+	background-color: #2d3337;
+}
+
+.tickets_right_part{
+	font: 12pt "Exo2-Regular";
+	color: #abadaf;
+	text-align: right;
+	padding-top: 25px;
+}
+
+.tickets_right_part p img{
+	margin-right: 15px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.tickets_content{
+	height: 350px;
+	overflow: auto;
+	margin: 0;
+}
+
+.tickets_block{
+	height: 275px;
+	box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.7);
+	margin-left: 0;
+	margin-right: 15px;
+	margin-top: 15px;
+    width: 31%;
+	background-color: #2d3337;
+	border-radius: 3px;
+	padding: 0;
+}
+
+.tickets_block:last-child{margin-bottom: 15px;}
+
+.tickets_block:nth-child(3n+1), .tickets_block:first-child{margin-left: 30px;}
+
+.tickets_block_head, .tickets_block_footer{height: 50px;}
+
+.tickets_block_head,.tickets_block_content{border-bottom: 1px solid #1a1d1e;}
+
+.tickets_block_content, .tickets_block_footer{border-top: 1px solid #3f4447;}
+
+.tickets_block_head{
+	font: 12pt "Exo2-Regular";
+	padding:15px 25px;
+}
+
+.tickets_block_head span:last-child{float: right;}
+
+.tickets_block_head span:last-child img{
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+.tickets_block_head span:last-child a{
+	text-decoration: none;
+	color: #67809f;
+	font-size: 11pt;
+}
+
+.tickets_block_content{
+	height: 175px;
+	font: 12pt "Exo2-Regular";
+	padding: 15px 25px;
+}
+
+
+.tickets_block_content p{line-height: 1.5!important;}
+
+.tickets_block_content span{
+	font: 10pt "Exo2-Light";
+	color: #abadaf;
+}
+
+.tickets_block_content div p{
+	width: 50%;
+	float: right;
+	margin-bottom: 15px;
+}
+
+
+.tickets_block_footer a{
+	float: right;
+	text-decoration: none;
+	font: 11pt "Exo2-Medium";
+	padding: 15px 25px;
+	color: #647c99;
+}
+
+.tickets_block_footer a:last-child{padding-right: 10px;}
+
+.tickets_block_footer a:first-child{padding-left: 10px;}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #282d30;
+}
+
+::-webkit-scrollbar-thumb {background-color: #3d4246;}
+
+.tickets_menu{
+	width: 270px;
+	height: 280px;
+	background-color: #262c30;
+	color: #cdcece;
+	position: absolute;
+	z-index: 5;
+	font: 12pt "Exo2-Light";
+	text-align: left;
+	border: 1px solid #3f4447;
+	display: none;
+	margin-top: 40px;
+}
+
+.tickets_menu ul{
+	list-style: none;
+	padding: 0;
+	height: 240px;
+	overflow: auto;
+}
+
+.tickets_menu ul li:last-child{	border-bottom: none; }
+
+.tickets_menu ul li{
+	padding: 10px 20px;
+	border-bottom: 1px solid #2d3337;
+	cursor: pointer;
+}
+
+.tickets_menu img{
+	position: absolute;
+	bottom: 278px;
+	right: 15px;
+}
+
+.tickets_menu p{
+	margin: 0;
+	font: 12pt "Exo2-Regular";
+	background-color: #263034;
+	padding: 10px 20px;
+	border-bottom: 1px solid #3f4447;
+}
+
+.tickets_active_menu{
+	display: block;
+}
+
+.tickets_active_menu a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.tickets_active_menu li:hover a {
+	text-decoration: none;
+	color: #67809f;
+}
+
+@media screen and (max-width:1077px) {
+	.tickets_block {width: 30%;}
+}
+@media screen and (max-width:991px) {
+	.tickets_left_part ul li a { font: 15pt "Exo2-ExtraBold";}
+	.tickets_block_head {font: 11pt "Exo2-Regular";}
+	.tickets_block_content { font: 11pt "Exo2-Regular";}
+	.tickets_block_footer a {font: 10pt "Exo2-Medium";}
+	.tickets_block_content {height: 155px;}
+	.tickets_block {height: 255px;}
+}
